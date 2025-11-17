@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="Login.css">
+
+    <title>Tela de Login</title>
+</head>
+<body>
+   <div class="fundo-transparente"></div>
+    <div class="nevoa"></div>
+
+    <video id="video-fundo" muted>
+        <source src="fundo.mp4" type="video/mp4">
+    </video>
+
+    <div class="cartao">
+        <h1 class="titulo-pulando">Faça seu login</h1>
+        <div class="linha-roxa"></div>
+        <br>
+        <form action="Login.html" method="post">
+            <label for="E-mail">Seu e-mail:</label>
+            <input type="email" id="E-mail" name="E-mail" required size="45">
+            <br>
+            <label for="password">Sua senha:</label>
+            <input type="password" id="password" name="password" required size="45">
+            <br>   
+            <input type="checkbox" id="lembrar" name="lembrar">
+            <label for="lembrar">Lembrar-me</label>
+            <br>
+            <input type="submit" value="Entrar">
+            <p>Esqueceu sua senha? <a href="https://support.google.com/accounts/answer/7682439?hl=pt-BR">Clique aqui!</a></p>
+        </form>
+    </div>   
+
+    <!-- Música de fundo -->
+    <audio id="musica" src="yoona.mp3"></audio>
+    <button id="Musica">▶</button>
+    <div id="notas-musicais"></div>
+    <br>
+
+    <!-- gato olá -->
+    <div class="mascote"></div>
+    <div class="fala">Olá! Seja bem-vindo 💜</div>
+
+    <!-- bongocat -->
+     <div class="bongocat"></div>
+     
+    <script src="Login.js"></script>
+</body>
+</html>

@@ -1,0 +1,365 @@
+*:focus {
+    outline: none;
+}
+p, h1, div, button {
+    user-select: none;
+    caret-color: transparent;
+}
+body {
+    font-family: comic sans ms, sans-serif;
+}
+
+/* ---------------- Fundo vídeo ---------------- */
+#video-fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    object-fit: cover;
+}
+/* ---------------- Fundo transparente ---------------- */
+.fundo-transparente {
+    background-color: rgba(0, 0, 0, 0.55);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* ---------------- Linha roxa ---------------- */
+.linha-roxa {
+    background: linear-gradient(90deg, #ce99ff, #d68aff);
+    width: 80%;
+    height: 5px;
+    margin: -10px auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* ---------------- Cartão login ---------------- */
+.cartao {
+    background: rgba(8, 0, 14, 0.605);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 20px rgba(207, 159, 255, 0.336);
+    margin: 80px auto;
+    width: 320px;
+    padding: 20px 25px;
+    color: #fff;
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(207, 159, 255, 0.4);
+    animation: fadeInUp 1.2s ease-out forwards;
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes fadeInUp {
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+
+/* ---------------- Título ---------------- */
+.titulo-pulando {
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 26px;
+    white-space: pre;
+    animation: fadeIn 0.8s ease-out forwards;
+    text-shadow: 0 0 8px #cf9fff, 0 0 15px #d68aff;
+}
+
+.titulo-pulando span {
+    display: inline-block;
+    animation: puloLetra 1.2s ease-in-out infinite;
+    animation-delay: var(--delay);
+}
+
+@keyframes puloLetra {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* ---------------- Formulário ---------------- */
+form {
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+label[for="E-mail"], label[for="password"] {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 17px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+label[for="lembrar"] {
+    display: inline-block;
+    font-size: 16px;
+    color: #e9e9e9;
+    animation: fadeIn 1s ease-in-out;
+}
+
+input[type="email"],
+input[type="password"] {
+    background: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(207, 159, 255, 0.4);
+    box-sizing: border-box;
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 15px;
+    color: #dedede;
+    font-size: 14px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+    caret-color: transparent;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border: 1px solid #cf9fff;
+    box-shadow: 0 0 8px #cf9fff;
+    transform: scale(1.03);
+    caret-color: #cf9fff;
+}
+
+
+/* ---------------- Checkbox ---------------- */
+input[type="checkbox"] {
+    cursor: pointer;
+    accent-color: #cf9fff;
+    transition: background 0.3s, transform 0.2s;
+    animation: fadeIn 1s ease-in-out;
+}
+
+input[type="checkbox"]:hover {
+    transform: scale(1.85);
+}
+
+/* ---------------- Botão entrar ---------------- */
+input[type="submit"] {
+    background: linear-gradient(90deg, #c27ffc 0%, #cf9fff 50%, #d079ff 100%);
+    letter-spacing: 2px;
+    display: block;
+    margin: 30px auto 0 auto;
+    color: #fff;
+    padding: 12px 0;
+    width: 70%;
+    font-family: comic sans ms, sans-serif;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.07);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25), 0 0 10px rgba(207, 159, 255, 0.6);
+}
+
+input[type="submit"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-20deg);
+    transition: 0.5s;
+}
+
+input[type="submit"]:hover::before {
+    left: 100%;
+}
+
+/* ---------------- Links e textos ---------------- */
+a {
+    color: #cf9fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #e1bfff;
+}
+
+p {
+    text-align: center;
+    margin-top: 15px;
+    color: #e9e9e9;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ---------------- Botão música ---------------- */
+#Musica {
+    position: fixed;
+    bottom: 28px;
+    left: 25px;
+    z-index: 2;
+    background: linear-gradient(135deg, #cf9fff 60%, #d68aff 100%);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 12px rgba(207, 159, 255, 0.6), 0 0 25px rgba(207, 159, 255, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#Musica:hover {
+    transform: scale(1.15) rotate(-10deg);
+    box-shadow: 0 0 18px rgba(207, 159, 255, 0.8), 0 0 35px rgba(207, 159, 255, 0.5);
+}
+
+#Musica.tocando {
+    animation: pulsar1 1.6s infinite ease-in-out;
+}
+
+@keyframes pulsar1 {
+    0%, 100% {
+        box-shadow: 0 0 12px rgba(207, 159, 255, 0.6), 0 0 25px rgba(207, 159, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 22px rgba(207, 159, 255, 1), 0 0 45px rgba(207, 159, 255, 0.6);
+    }
+}
+
+#Musica::after {
+    content: "";
+    position: absolute;
+    border: 2px dashed rgba(207, 159, 255, 0.6);
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    animation: girar 6s linear infinite;
+}
+
+@keyframes girar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* ---------------- Notas musicais ---------------- */
+#notas-musicais {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 80px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.nota {
+    position: absolute;
+    font-size: 24px;
+    color: #e8aafb;
+    opacity: 0.8;
+    animation: subir 2s linear forwards;
+}
+
+@keyframes subir {
+    0% { transform: translateY(0) scale(1); opacity: 0.8; }
+    80% { opacity: 1; }
+    100% { transform: translateY(-120px) scale(1.3); opacity: 0; }
+}
+
+/* ---------------- Névoa ---------------- */
+.nevoa {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background:
+        radial-gradient(circle at top left, rgba(207, 159, 255, 0.144), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(180, 100, 255, 0.089), transparent 30%),
+        radial-gradient(circle at top right, rgba(207, 159, 255, 0.411), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(180, 100, 255, 0.301), transparent 30%);
+}
+
+/* ---------------- Mascote ---------------- */
+.mascote {
+    position: fixed;
+    bottom: 0px;
+    right: 20px;
+    width: 130px;
+    height: 120px;
+    background: url('cat.png') no-repeat center/contain;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.fala {
+    position: absolute;
+    bottom: 140px;
+    right: 45px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 12px;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #6a2ca0;
+    font-family: "Comic Sans MS", sans-serif;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    display: none;
+}
+
+.fala::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    right: 20px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: rgba(255,255,255,0.85) transparent transparent transparent;
+}
+
+/* bongocat */
+
+/* Bongocat parado (primeiro frame PNG) */
+.bongocat {
+    position: absolute;
+    top: -14.5px; /* em cima do card */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 100px;
+    background: url('bongocat.png') no-repeat center/contain;
+    z-index: 10;
+    animation: pulsar2 4s infinite ease-in-out;
+}
+
+/* Animação de pulsar */
+@keyframes pulsar2 {
+    0%, 100% { transform: translateX(-50%) scale(1.04); }
+    50% { transform: translateX(-50%) scale(1); }
+}
+
+
